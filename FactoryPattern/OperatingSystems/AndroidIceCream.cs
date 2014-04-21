@@ -1,12 +1,23 @@
 using System;
+using FactoryPattern.Apps;
 
 namespace FactoryPattern.OperatingSystems
 {
 	public class AndroidIceCream : SmartPhoneOS
 	{
-		protected override string getName ()
+		private AppFactory appFactory;
+
+		public AndroidIceCream(AppFactory appFactory)
 		{
-			return "Ice Cream";
+			this.appFactory = appFactory;
+		}
+
+		public override void StartApps ()
+		{
+			this.EmailApp = appFactory.StartEmailApp ();
+			this.BrowserApp = appFactory.StartBrowserApp ();
+
+			Console.WriteLine (this.EmailApp.GetName () + ", " + this.BrowserApp.GetName () + " have been started...");
 		}
 	}
 }

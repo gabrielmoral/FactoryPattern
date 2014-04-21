@@ -1,12 +1,23 @@
 using System;
+using FactoryPattern.Apps;
 
 namespace FactoryPattern.OperatingSystems
 {
 	public class AndroidJellyBean : SmartPhoneOS
 	{
-		protected override string getName ()
+		private AppFactory appFactory;
+
+		public AndroidJellyBean(AppFactory appFactory)
 		{
-			return "Jelly Bean";
+			this.appFactory = appFactory;
+		}
+
+		public override void StartApps ()
+		{
+			this.EmailApp = appFactory.StartEmailApp ();
+			this.BrowserApp = appFactory.StartBrowserApp ();
+
+			Console.WriteLine (this.EmailApp.GetName () + ", " + this.BrowserApp.GetName () + " have been started...");
 		}
 	}
 }

@@ -1,13 +1,24 @@
 using System;
 using FactoryPattern.OperatingSystems;
+using FactoryPattern.Apps;
 
 namespace FactoryPattern.OperatingSystems
 {
 	public class WindowsMango : SmartPhoneOS
 	{
-		protected override string getName ()
+		private AppFactory appFactory;
+
+		public WindowsMango(AppFactory appFactory)
 		{
-			return "Mango";
+			this.appFactory = appFactory;
+		}
+
+		public override void StartApps ()
+		{
+			this.EmailApp = appFactory.StartEmailApp ();
+			this.BrowserApp = appFactory.StartBrowserApp ();
+
+			Console.WriteLine (this.EmailApp.GetName () + ", " + this.BrowserApp.GetName () + " have been started...");
 		}
 	}
 }

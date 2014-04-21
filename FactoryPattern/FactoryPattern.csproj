@@ -43,9 +43,21 @@
     <Compile Include="Smartphones\AndroidSmartphone.cs" />
     <Compile Include="Smartphones\WindowsSmartphone.cs" />
     <Compile Include="Smartphones\Smartphone.cs" />
+    <Compile Include="Apps\EmailApp.cs" />
+    <Compile Include="Apps\BrowserApp.cs" />
+    <Compile Include="Apps\AppFactory.cs" />
+    <Compile Include="Apps\AppFactoryWindows.cs" />
+    <Compile Include="Apps\AppFactoryAndroid.cs" />
+    <Compile Include="Apps\WindowsApps\HotmailApp.cs" />
+    <Compile Include="Apps\AndroidApps\GmailApp.cs" />
+    <Compile Include="Apps\WindowsApps\InternetExplorerApp.cs" />
+    <Compile Include="Apps\AndroidApps\ChromeApp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OperatingSystems\" />
     <Folder Include="Smartphones\" />
+    <Folder Include="Apps\" />
+    <Folder Include="Apps\AndroidApps\" />
+    <Folder Include="Apps\WindowsApps\" />
   </ItemGroup>
 </Project>
