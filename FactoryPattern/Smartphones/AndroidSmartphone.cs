@@ -1,10 +1,11 @@
 ﻿using System;
 using FactoryPattern.OperatingSystems;
 
-namespace FactoryPattern
+namespace FactoryPattern.Smartphones
 {
 	public class AndroidSmartphone : Smartphone
 	{
+		//Factory method
 		protected override SmartPhoneOS Setup (int year)
 		{
 			SmartPhoneOS smartphoneOS;

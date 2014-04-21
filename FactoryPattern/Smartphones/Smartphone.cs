@@ -1,10 +1,11 @@
 ﻿using System;
 using FactoryPattern.OperatingSystems;
 
-namespace FactoryPattern
+namespace FactoryPattern.Smartphones
 {
 	public abstract class Smartphone
 	{
+		//Factory method
 		protected abstract SmartPhoneOS Setup (int year);
 
 		public SmartPhoneOS StartOperatingSystem(int year)

@@ -32,17 +32,17 @@
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="Smartphone.cs" />
     <Compile Include="OperatingSystems\AndroidIceCream.cs" />
     <Compile Include="OperatingSystems\AndroidJellyBean.cs" />
     <Compile Include="OperatingSystems\AndroidKitKat.cs" />
     <Compile Include="OperatingSystems\SmartPhoneOS.cs" />
-    <Compile Include="WindowsSmartphone.cs" />
     <Compile Include="OperatingSystems\WindowsApollo.cs" />
     <Compile Include="OperatingSystems\WindowsMango.cs" />
     <Compile Include="OperatingSystems\WindowsBlue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Smartphones\AndroidSmartphone.cs" />
+    <Compile Include="Smartphones\WindowsSmartphone.cs" />
+    <Compile Include="Smartphones\Smartphone.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OperatingSystems\" />
